@@ -1,0 +1,20 @@
+{% extends "index.html" %}
+
+
+{% load static %}
+
+
+{% block contenido %}
+    <br>
+    <form action="alta" method="POST">{% csrf_token %}
+
+        <b>Nombres:</b><input type="text" name="nombres" required>
+        <b>Apellidos:</b><input type="text" name="apellidos" required><br><br>
+        <b>Cc:</b><input type="number" name="cc" required>
+        <b>Salario:</b><input type="number" name="salario" required>
+    
+        <input type="submit" value="Enviar">
+
+    </form>
+
+{% endblock %}

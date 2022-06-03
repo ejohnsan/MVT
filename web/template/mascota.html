@@ -1,0 +1,20 @@
+{% extends "index.html" %}
+
+
+{% load static %}
+
+
+{% block contenido %}
+    <br>
+    <form action="alta_mascota" method="POST">{% csrf_token %}
+
+        <b>Nombre Mascota:</b><input type="text" name="nombre_mascota" required>
+        <b>Edad:</b><input type="number" name="edad" required><br><br>
+        <b>Raza:</b> <input type="text" name="raza" required>
+        <b>Propietario:</b><input type="text" name="propietario" required>
+    
+        <input type="submit" value="Enviar">
+
+    </form>
+    
+{% endblock %}

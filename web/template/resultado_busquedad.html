@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    {% if mascota %}
+
+    <ul>
+
+    {% for n in mascota %}
+        <li>Nombre Mascota: {{n.nombre_mascota}}</li>
+        <li>Edad: {{n.edad}}</li>
+        <li>Raza: {{n.raza}}</li>
+        <li>Propietario: {{n.raza}}</li>
+    {% endfor %}
+    </ul>
+
+    {% else %}
+        <p>No se encontraron mascota</p>
+    {% endif %}
+
+
+</body>
+</html>

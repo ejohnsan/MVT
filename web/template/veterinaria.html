@@ -1,0 +1,32 @@
+{% extends "index.html" %}
+
+    {% load static %}
+
+
+    {% block contenido %}
+
+    <table class="table">
+        <thead class="table-dark">
+            <tr>
+                <th scope="col">Id</th><!-- en el th o thead ingramos los datos de navegacion o lo que conocemos como nav-->  
+                <th scope="col">Nombre_Mascota</th>
+                <th scope="col">Edad</th>
+                <th scope="col">Raza</th>
+                <th scope="col">Propietario</th>
+
+            </tr>
+        </thead>
+    <tbody>
+        {% for n in veterinaria %}
+        <tr>
+            <th scope="row">{{n.id}}</th>
+            <td>{{n.nombre_mascota}}</td>
+            <td>{{n.edad}}</td>
+            <td>{{n.raza}}</td>
+            <td>{{n.propietario}}</td>
+        </tr>
+        {% endfor %} 
+    </tbody>
+</table>
+
+{% endblock %}

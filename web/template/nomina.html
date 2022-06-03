@@ -1,0 +1,33 @@
+{% extends "index.html" %}
+    
+  {% load static %}
+    
+    
+    {% block contenido %}
+
+      <table class="table"><!-- aca utilizamos una tabla de bootstrap y ingresamos la lista de cursos-->
+        <thead>
+          <tr>
+            <th scope="col">Id</th> <!-- en el th o thead ingramos los datos de navegacion o lo que conocemos como nav-->  
+            <th scope="col">Nombres</th>
+            <th scope="col">Apellidos</th>
+            <th scope="col">Cc</th>
+            <th scope="col">Salario</th>
+
+          </tr>
+        </thead>
+        <tbody> <!-- en el tbody ingresamos nuestros datos para que se vean como el for que recorre la-->
+             <!-- lista de nuestra BD-->
+            {% for n in nomina %}
+            <tr>
+                <th scope="row">{{n.id}}</th>
+                <td>{{n.nombres}}</td>
+                <td>{{n.apellidos}}</td>
+                <td>{{n.cc}}</td>
+                <td>{{n.salario}}</td>
+            </tr>
+            {% endfor %} 
+         
+        </tbody>
+      </table>
+{% endblock %}
